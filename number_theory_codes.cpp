@@ -166,6 +166,29 @@ void primeFactors(int n)
 
 }
 
+//	least prime factor of a number
+
+void leastPrimeFactor(int n)
+{
+    vector<int>least_prime(n+1 , 0);
+
+    least_prime[0] = least_prime[1] = 1;
+
+    for (int i = 2; i <= n; ++i)
+    {
+        if(least_prime[i] == 0)
+        {
+            least_prime[i] = i;
+            for (int j = i*i; j <= n; j+=i)
+            {
+                if(least_prime[j] == 0)
+                    least_prime[j] = i;
+            }
+        }
+    }
+    cout << "least prime of " << n << " = " << least_prime[n];
+
+}
 
 int main()
 {
