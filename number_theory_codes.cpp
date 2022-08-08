@@ -208,11 +208,13 @@ int main()
     else
         cout << "Not Prime";
 */
-    //sieve(n);
+    //  sieve(n);
 
-    //allFactors(n);
+    //  allFactors(n);
 
-    //primeFactors(n);
+    //  primeFactors(n);
+    
+    //  leastPrimeFactor(n);
 
     return 0;
 }
